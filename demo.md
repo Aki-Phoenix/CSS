@@ -8,16 +8,20 @@ Thuộc tính border-radius có thể có từ 1 đến 4 giá trị như:
 - Four value-border-radius: 20px 50px 30px 10px;
     (bao gồm top-left, top-right, bottom-right, bottom-left)
 
-    ```#Rounded_Cornes4{
+    ```
+    #Rounded_Cornes4{
     border-radius: 20px 50px 30px 10px;
-    }```
+    }
+    ```
 
 - Three value-border-radius: 20px 50px 30px;
     (bao gồm top-left, top-right = bottom-left, bottom-right) 
 
-    ```Rounded_Conrnes3{
+    ```
+    #Rounded_Conrnes3{
     border-radius: 20px 50px 30px;
-    }```
+    }
+    ```
 
  - Two value-border-radius: 20px 40px;
     (bao gồm top-left=bottom-right, top-right=bottom-left )
