@@ -25,6 +25,7 @@ Thuộc tính border-radius có thể có từ 1 đến 4 giá trị như:
 
  - Two value-border-radius: 20px 40px;
     (bao gồm top-left=bottom-right, top-right=bottom-left )
+
         ```
         #Rounded_Conrnes2{
             border-radius: 20px 40px;
@@ -33,6 +34,7 @@ Thuộc tính border-radius có thể có từ 1 đến 4 giá trị như:
 
  - One value-border-radius: 20px;
     ( 4 góc bằng nhau)
+    
         ```
         #Rounded_Conrnes1{
             border-radius:20px;
