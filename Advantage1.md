@@ -190,4 +190,148 @@ Chỉ định vùng vẽ của nền. Nó có 3 giá trị:
   background-clip: content-box;
 }
  ```
+
+ 4. CSS Color
+RGBA Colors: là phần mở rộng của giá trị màu RGB với alpha- chỉ định độ mờ cho màu.
+
+Giá trị màu RGBA được chỉ định bẳng: rgba(red, green, blue, alpha). Tham số alpha là một số trong khoảng 0.0(hoàn toàn trong suốt) và 1.0(hoàn toàn mờ)
+
+`rgba(255,0,0,0.2); `
+`rgba(255,0,0,0.8); `
+
+HSL Color: viết tắt của Hue, Saturation và Lightness.
+
+Giá trị màu HSL được chỉ định bằng: hsl (hue-màu sắc, saturation-độ bão hòa, lightness-độ sáng).
+
+Trong đó: 
+- Hue là 1 độ trên bánh xe màu(từ 0->360)
+ - 0(hoặc 360) là màu đỏ.
+ - 120 là màu xanh
+ - 340 là màu xanh
+- Saturation là 1 giá trị phần trăm:
+ - 100% là màu đầy đủ
+- Lightness là 1 giá trị phần trăm:
+ - 0% là màu tối(đen) và 100% là màu trắng.
+
+ `hsl(0,100%,50%)`
+
+Giá trị màu HSLA là phần mở rộng của HSL với alpha-chỉ định độ mở cho màu.
+
+Giá trị của màu HSLA là: hsla(hue-màu sắc, saturation-độ bão hòa, lightness-độ sáng, alpha) trong đó alpha xác định độ mờ, là 1 số nằm trong khoảng 0.0(fully transparent-hoàn toàn trong suốt) và 1.0(full opaque-hoàn toàn mờ).
+
+`hsla(0, 100%, 40%, 0.4)`
+
+Opacity
+
+Thuộc tính `opacity` trong CSS được sử dụng để chỉ độ mờ cho toàn bộ thành phần(bao gồm background và text sẽ mờ/trong suốt)
+
+Thuộc tính `opacity` có giá trị là một số nằm trong khoảng 0.0(full transparent) và 1.0(fully opaque).
+
+```
+#demo{
+background-color: rgb(255,0,0); 
+opacity:0.6;
+}
+```
+
+ CSS Gradients: cho phép bạn hiển thị các hiệu ứng chuyển tiếp mượt mà giữa hai hoặc nhiều màu được chỉ định.
+
+ Để tạo ra 1 CSS Gradients ta cần xác định 2 yếu tố:
+
+  - Linear Gradients-độ dốc tuyến tính (đi xuống/lên/trái/phải/chéo)
+  - Radial Gradients(được xác định bởi trung tâm của họ)
+
+  CSS Linear Gradients
+
+  Để tạo 1 linear gradients ta cần xác định ít nhất hai điểm dừng màu. Điểm dừng màu là màu ta muốn hiển thị chuyển tiếp mượt mà. Ta có thể đặt điểm bắt đầu và hướng(hoặc góc) cùng với hiệu ứng chuyển màu.
+
+  Cú pháp: 
+  ```
+  background-image: linear-gradient(direction, color-stop1, color-stop2,....)
+  ```
+
+  Linear Gradient - Top to Bottom(mặc định)
+
+  Đây là hiệu ứng chuyển tiếp màu từ trên xuống dưới.
+
+  ```
+  #example{
+  background-image:linear-gradient(blue, violet);
+  }
+  ```
+
+  Linear Gradient - Left to Right
+
+  Hiệu ứng chuyển tiếp màu từ trái qua phải.
+
+  ```
+  #example2{
+  background-image: linear-gradient(to right, red, yellow);
+  }
+  ```
+
+  Linear Gradient - Diagonal
+
+  Hiệu ứng chuyển tiếp màu theo đường chéo từ trên xuống dưới.
+
+  ```
+  #example3{
+  background-image: linear-gradient(to bottom, blue, white);
+  }
+  ```
+
+  Chuyển tiếp màu sử dụng góc:
+
+  Góc được chỉ định là một góc giữa một đường ngang và đường dốc-linear gradient
+
+  ```
+  background-image: linear-gradient(angle-góc, color1, color2);
+  ```
+
+ ```
+ #example4{
+   background-image: linear-gradient(-90deg, red, yellow);
+ }
+ ```
+
+ Sử dụng nhiều màu dừng
+
+ ```
+ #exam{
+  background-image: linear-gradient(red, yellow, green);
+ }
+ ```
+
+```
+#exam2{
+  background-image: linear-gradient(to right, red, blue, orange, violet, yellow);
+}
+```
+CSS gradient cho phép sử dụng thuộc tính transparency(độ trong suốt) để tạo hiệu ứng mờ dần.
+
+Để thêm hiệu ứng trong suốt ta sử dụng hàm rgba() để xác định các điểm dừng màu. Tham số cuối của rgba() chỉ độ trong suốt từ 0->1(không trong suốt)
+
+```
+#exam{
+  background-image: linear-gradient(to right, rgba(240,0,0,0), rgba(240,0,0,1));
+
+  //màu được chuyển dần ban đâu flaf trong suốt đến màu chuẩn rgba(240,0,0,1)
+}
+```
+
+Lặp lại một linear-gradient
+
+```
+#exam{
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+  }
+}
+```
+
+CSS Radial Gradient....
+
+
+
+
+
  
