@@ -241,7 +241,7 @@ opacity:0.6;
   - Linear Gradients-độ dốc tuyến tính (đi xuống/lên/trái/phải/chéo)
   - Radial Gradients(được xác định bởi trung tâm của họ)
 
-  CSS Linear Gradients
+- CSS Linear Gradients
 
   Để tạo 1 linear gradients ta cần xác định ít nhất hai điểm dừng màu. Điểm dừng màu là màu ta muốn hiển thị chuyển tiếp mượt mà. Ta có thể đặt điểm bắt đầu và hướng(hoặc góc) cùng với hiệu ứng chuyển màu.
 
@@ -250,7 +250,7 @@ opacity:0.6;
   background-image: linear-gradient(direction, color-stop1, color-stop2,....)
   ```
 
-  Linear Gradient - Top to Bottom(mặc định)
+  - Linear Gradient - Top to Bottom(mặc định)
 
   Đây là hiệu ứng chuyển tiếp màu từ trên xuống dưới.
 
@@ -260,7 +260,7 @@ opacity:0.6;
   }
   ```
 
-  Linear Gradient - Left to Right
+  - Linear Gradient - Left to Right
 
   Hiệu ứng chuyển tiếp màu từ trái qua phải.
 
@@ -270,7 +270,7 @@ opacity:0.6;
   }
   ```
 
-  Linear Gradient - Diagonal
+  - Linear Gradient - Diagonal
 
   Hiệu ứng chuyển tiếp màu theo đường chéo từ trên xuống dưới.
 
@@ -280,7 +280,7 @@ opacity:0.6;
   }
   ```
 
-  Chuyển tiếp màu sử dụng góc:
+  - Chuyển tiếp màu sử dụng góc:
 
   Góc được chỉ định là một góc giữa một đường ngang và đường dốc-linear gradient
 
@@ -294,7 +294,7 @@ opacity:0.6;
  }
  ```
 
- Sử dụng nhiều màu dừng
+ - Sử dụng nhiều màu dừng
 
  ```
  #exam{
@@ -307,7 +307,7 @@ opacity:0.6;
   background-image: linear-gradient(to right, red, blue, orange, violet, yellow);
 }
 ```
-CSS gradient cho phép sử dụng thuộc tính transparency(độ trong suốt) để tạo hiệu ứng mờ dần.
+ - CSS gradient cho phép sử dụng thuộc tính transparency(độ trong suốt) để tạo hiệu ứng mờ dần.
 
 Để thêm hiệu ứng trong suốt ta sử dụng hàm rgba() để xác định các điểm dừng màu. Tham số cuối của rgba() chỉ độ trong suốt từ 0->1(không trong suốt)
 
@@ -315,17 +315,16 @@ CSS gradient cho phép sử dụng thuộc tính transparency(độ trong suốt
 #exam{
   background-image: linear-gradient(to right, rgba(240,0,0,0), rgba(240,0,0,1));
 
-  //màu được chuyển dần ban đâu flaf trong suốt đến màu chuẩn rgba(240,0,0,1)
+  //màu được chuyển dần ban đầu là trong suốt đến màu chuẩn rgba(240,0,0,1)
 }
 ```
 
-Lặp lại một linear-gradient
+ - Lặp lại một linear-gradient
 
 ```
 #exam{
   background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
   }
-}
 ```
 
 CSS Radial Gradient....
