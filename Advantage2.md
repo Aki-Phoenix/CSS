@@ -155,3 +155,164 @@ Nếu 1 từ quá dài để vừa tròn 1 khu vực, nó sẽ mở rộng ra b�
  ```
 
 7. CSS Web Font
+
+Quy tắc sử dụng phông chữ: Được xác định trong CSS `@font-face` 
+
+Các định dạng phông chữ khác nhau:
+- TrueType Fonts(TTF): Là một tiêu chuẩn phông chữ được phát triển vào cuối những năm 1980, bởi Apple và Microsoft. TrueType là định dạng phông chữ phổ biến nhất cho cả hệ điều hành Mac OS và Microsoft Windows.
+
+- OpenType Fonts(OTF): Là một định dạng cho phông chữ m áy tính có thể mở rộng. ó được xây dựng trên TrueType và là nhãn hiệu đã đăng kí của Microsoft. Phông chữ OpenType được sử dụng phổ biến hiện nay trên các nên tảng máy tính chính.
+
+- The Web Open Font Format(WOFF): Là một định dạng cho phông chữ được sử dụng trên các trang web. Được phát triển vào năm 2009. WOFF về cơ bản là OpenType hoặc TrueType với nén và siêu dữ liệu bổ sung. Mục tiêu là hỗ trợ phân phối phông chữ từ máy chủ đến máy khách qua mạng với các ràng buộc về băng thông.
+
+- WOFF 2.0: Phông chữ TrueType/ OpenType cung cấp khả năng giải nén tốt hơn WOFF 1.0.
+
+- SVG Fonts/Shapes: //note
+
+- Embedded OpenType Fonts(EOT): Là một dạng phông chữ OpenType nhỏ gọn được Microsoft thiết kế để sử dụng làm phông chữ nhúng trên các trang web.
+
+Sử dụng font chữ mình muốn, trong quy tắc `@font-face` ta xác định tên phông chữ, và sau đó là trỏ đến tệp phông chữ. Để sử dụng phông chữ cho 1 phần tử HTML, ta sử dụng thuộc tính`font-family`:
+
+```
+//cài đặt phông chữ
+@font-face{
+    font-family: FontFreak;  //tên font là FontFreak
+    src: url(fontfreak.woff/) // địa chỉ tệp phông chữ
+}
+//áp dụng phông chữ đã cài đặt cho đối tượng trong thẻ div
+div { 
+    font-family: FonFreak;
+}
+```
+
+Sử dụng chữ đậm: Ta phải thêm 1 quy tắc khác trong `@font-face` có chứa các mô tả cho văn bản in đậm:
+
+```
+@font-face{
+    font-family: FontFreak;
+    src: url(fontfreak_bold.woff); //tệp này là 1 tệp phông chữ khác có chứa các kí tự in đậm cho phông chữ fontfreak
+    font-weight: bold;
+}
+```
+
+Các mô tả phông chữ có thể được xác định bên trong `font-face`:
+ - font-family: name;
+ - src: URL;
+ - font-stretch: normal/condensed/ultra-condensed/extra-condensed/semi-condensed/expanded/semi-expanded/extra-expanded/ultr-expanded.
+ - font-style: normal/italic/oblique
+ - font-weight: normal/bold/100/200/...
+
+8. CSS 2D Transforms
+
+CSS Transforms cho phép người dùng di chuyển, xoay,, chia tỷ lệ và các phần tử nghiêng. 
+
+Các phương thức chuyển đổi 2D:
+- translate(): Là Phương pháp di chuyển một phần tử từ vị trí hiện tại của mình(theo các thông số đưa ra cho các trục X và trục Y)
+
+```
+div{ //di chuyển phần tử trong thẻ <div> 50px sang phải và giảm 100px từ vị trí hiện tại của nó.
+    transform: translate(50px, 100px);
+}
+```
+
+- rotate(): Là phương pháp quay một chiều kim đồng hồ, hoặc truy cập chiều kim đồng hồ theo một mức độ nhất định. Khi sử dụng giá trị âm phần tử sẽ xoay ngược chiều kim đồng hồ.
+
+```
+div2{ // xoay phần tử trong thẻ <div> theo chiều kim đồng hồ 1 góc 30 độ.
+    transform: rotate(30deg);
+}
+```
+
+- scale(): Là phương pháp tăng hoặc giảm kích thước của 1 phần tử(theo các thông số đứa ra cho chiều rộng và chiều cao).
+
+```
+div3{ //tăng phần tử trong thẻ div gấp 2 lần chiều rộng và gấp 3 lần chiều cao ban đầu của nó.
+    transform: scale(2,3);
+}
+div4{ //giảm chiều rộng và chiều cao xuống một nửa.
+    transform: scale(0.5,0.5);
+}
+```
+
+- scaleX(): Là phương pháp tăng hoặc giảm chiều rộng của một phần tử.
+
+```
+div4{ //tăng chiều rộng gấp 2 lần.
+    transform: scaleX(2);
+}
+div5{ //giảm chiều rộng xuống một nửa.
+    transform: scaleX(0.5);
+}
+```
+
+- scaleY(): Là phương pháp tăng hoặc giảm chiều cao của một phần tử.
+
+```
+div6{ // tăng chiều cao lên gấp 3 lần.
+    transform: scaleY(3);
+}
+div7{ //giảm chiều cao xuống một nửa.
+    transform: scaleY(0.5);
+}
+```
+
+- skewX(): là phương pháp làm lệch một yếu tố dọc theo trục X bởi các góc độ nhất định.
+
+```
+div{ // làm nghiêng 1 thẻ <div> một góc 30 độ dọc theo trục X.
+    transform: skewX(30deg);
+}
+```
+
+- skewY(): Là phương pháp làm lệch một yếu tố dọc theo trục Y bởi góc độ nhất định.
+
+```
+div{ // làm nghiêng phần tử <div> một góc 30 độ dọc theo trục Y.
+    transform: skewY(30deg);
+}
+```
+
+- skew(): là phương pháp làm lệch một yếu tố dọc theo trục X và trục Y bởi những góc nhất định. Nếu tham số thứ 2 không được xác định nó sẽ mặc định bằng 0.
+
+```
+div{ //làm nghiêng phần tử <div> một góc 30 độ dọc theo trục X và 50 độ dọc theo trục Y.
+    transform: skew(30deg, 50deg)
+}
+```
+
+- matrix(): Là phương pháp kết hợp tất cả các phương pháp chuyển đổi 2D thành một. Nó có các tham số như sau:
+
+`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
+
+```
+div{
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+```
+
+9. 3D Transforms
+
+Các phương thức chuyển đổi:
+- rotateX(): Là phương pháp quay một yếu tố xung quanh trục X của nó ở một mức độ nhất định.
+
+```
+#exam{
+    transform: rotateX(180deg);
+}
+```
+
+- rotateY(): Phương pháp quay một yếu tố xung quanh trục Y của nó ở một góc nhất định.
+
+```
+#exam{
+    transform: rotateY(90deg);
+}
+```
+
+- rotateZ(): Phương pháp quay một yếu tố xung quanh trục Z của nó ở một mức độ nhất định.
+
+```
+#exam{
+    transform: rotateZ(90deg);
+}
+```
