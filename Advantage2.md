@@ -383,10 +383,10 @@ div { //hình sẽ chạy 5 lần trước khi dừng.
 }
 ```
 - animation-direction: Quy định hình động được phát theo chiều nào. Nó có các giá trị:
- - normal: Hình được phát như bình thường(default).
- - reverse: Hình được phát theo hướng ngược lại.
- - alternate: Hình được phát bình thường trước sau đó phát ngược lại.
- - alternate-reverse: Hình được phát ngược trước sau đó phát như bình thường.
+  - normal: Hình được phát như bình thường(default).
+  - reverse: Hình được phát theo hướng ngược lại.
+  - alternate: Hình được phát bình thường trước sau đó phát ngược lại.
+  - alternate-reverse: Hình được phát ngược trước sau đó phát như bình thường.
 
 - animation-timing-function: Chỉ định đường cong tốc độ của ảnh động. Nó có các giá trị sau:
  - ease: Chỉ định ảnh động bắt đầu với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(default).
