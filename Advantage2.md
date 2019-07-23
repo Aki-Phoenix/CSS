@@ -204,7 +204,7 @@ Các mô tả phông chữ có thể được xác định bên trong `font-face
 
 8. CSS 2D Transforms
 
-CSS Transforms cho phép người dùng di chuyển, xoay,, chia tỷ lệ và các phần tử nghiêng. 
+CSS Transforms cho phép người dùng di chuyển, xoay, chia tỷ lệ và các phần tử nghiêng. 
 
 Các phương thức chuyển đổi 2D:
 - translate(): Là Phương pháp di chuyển một phần tử từ vị trí hiện tại của mình(theo các thông số đưa ra cho các trục X và trục Y)
@@ -223,7 +223,7 @@ div2{ // xoay phần tử trong thẻ <div> theo chiều kim đồng hồ 1 góc
 }
 ```
 
-- scale(): Là phương pháp tăng hoặc giảm kích thước của 1 phần tử(theo các thông số đứa ra cho chiều rộng và chiều cao).
+- scale(): Là phưphần tử(theo các thông số đứa ra cho ơng pháp tăng hoặc giảm kích thước của 1 chiều rộng và chiều cao).
 
 ```
 div3{ //tăng phần tử trong thẻ div gấp 2 lần chiều rộng và gấp 3 lần chiều cao ban đầu của nó.
@@ -316,3 +316,100 @@ Các phương thức chuyển đổi:
     transform: rotateZ(90deg);
 }
 ```
+
+10. CSS Transitions
+
+Cho phép thay đổi giá trị thuộc tính một cách trơn tru, trong một khoảng thời gian nhất định.
+
+- transition-timing-function: quy định các đường cong tốc độ của hiệu ứng chuyển tiếp.
+
+Nó có các giá trị như sau:
+ - ease: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(mặc định).
+ - linear: Chỉ định hiệu hứng chuyển tiếp với cùng tốc độ từ đầu đến cuối.
+ - ease-in: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm.
+ - ease-out: Chỉ định hiệu ứng chuyển tiếp với kết thúc chậm.
+ - ease-in-out: Chỉ định hiệu ứng chuyển tiếp với khởi đầu và kết thúc chậm.
+ - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị của riêng mình trong hàm cublic-bezier.
+
+- transition-delay: Quy định cụ thể một giá trị delay(tính bằng giây) cho các hiệu ứng chuyển.
+
+- transition-duration: Cho phép chỉ định thời gian hoàn thành 1 hiệu ứng chuyển tiếp(s/mms).
+- transition-property: Chỉ định tên của thuộc tính CSS, hiệu ứng chuyển tiếp dành cho nó.
+
+11. CSS Animations
+
+CSS cho phép các phẩn tử HTML hoạt động liên tiếp mà không cần sử dụng Javascrip hoặc Flash.
+
+Ta tìm hiểu các thuộc tính như:
+- @keyframes: Khi chỉ định kiểu CSS bên trong `@keyframes` hình động sẽ thay đổi từ kiểu hiện tại sang kiểu mới vào những thời điểm nhất định.
+
+```
+@keyframes exam{ //chỉ định hiểu thay đổi bằng từ khóa `from` và `to` đại diện cho 0%(bắt đầu) và 100%(hoàn thành).
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+div{
+    width:100px;
+    height: 100px;
+    background-color:red;
+    animation-name: exam; //tên của animation.
+    animation-duration: 4s; // xác định thời thời gian hình ảnh động cần thực hiện để hoàn thành. Nếu không chỉ định thời gian, sẽ không có hình ảnh động.
+}
+```
+- animation-delay: Quy định sự chậm trễ cho dự bắt đầu của một hình ảnh động.
+
+```
+div { //trễ 2s trước khi hình bắt đầu hoạt động
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s; // nếu để giá trị âm (-N), sẽ được hiểu là hình đã hoạt động được N giây.
+}
+```
+- animation-iteration-count: Thuộc tính sác định số lần chạy trước khi dừng của hình động.
+
+```
+div { //hình sẽ chạy 5 lần trước khi dừng.
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 5; //sử dụng `infinite` nếu muốn hình chạy mãi.
+}
+```
+- animation-direction: Quy định hình động được phát theo chiều nào. Nó có các giá trị:
+ - normal: Hình được phát như bình thường(default).
+ - reverse: Hình được phát theo hướng ngược lại.
+ - alternate: Hình được phát bình thường trước sau đó phát ngược lại.
+ - alternate-reverse: Hình được phát ngược trước sau đó phát như bình thường.
+
+- animation-timing-function: Chỉ định đường cong tốc độ của ảnh động. Nó có các giá trị sau:
+ - ease: Chỉ định ảnh động bắt đầu với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(default).
+ - linear: Chỉ định ảnh động có cùng tốc độ từ đầu đến cuối.
+ - ease-in: Chỉ định ảnh động với khởi đầu chậm.
+ - ease-out: Chỉ định ảnh động có kết thúc chậm.
+ - ease-in-out: Chỉ định ảnh động với khởi đầu và kết thúc đều chậm.
+ - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị riêng của mình trong hàm cublic-bezier.
+
+- animation-fill-mode: Quy định cụ thể một phong các cho các phần tử mục tiêu khi ảnh đọng không được phát (trước khi nó bắt đầu, sau khi nó kết thúc hoặc cả hai). Nó có các giá trị:
+ - none: (default) Ảnh động sẽ không áp dụng bất kì kiểu nào cho thành phần trước hoặc sau khi nó được phát.
+ - forwards: Phần tử sẽ giữ lại các kiểu giá trị được đặt bởi khung hình chính cuối cùng(tùy thuộc vào hướng đi và số lần lặp lại của ảnh động).
+ - backwards: Phần tử sẽ nhận các kiểu giá trị được đặt bởi khung hình chính đầu tiên(phụ thuộc vào hướng đi của ảnh động).
+ - both: Ảnh động sẽ tuân thủ theo các quy tắc cho cả tiến và lùi, mở rộng các thuộc tính ảnh động theo cả 2 hướng. 
+
+- animation: Là thuộc tính ngắn gọn cho phép người dùng chị định các giá trị cho các thuộc tính trong đối với ảnh động.
+
+`animation: exam 5s linear 2s infinite alternate;`
+
+Trong đó:
+ - exam: animation-name
+ - 5s: animation-duration
+ - linear: animation-timing-function
+ - 2s: animation-delay
+ - infinite: animation-iteration-count
+ - alternate: animation-direction
