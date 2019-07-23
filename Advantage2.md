@@ -324,12 +324,12 @@ Cho phép thay đổi giá trị thuộc tính một cách trơn tru, trong mộ
 - transition-timing-function: quy định các đường cong tốc độ của hiệu ứng chuyển tiếp.
 
 Nó có các giá trị như sau:
- - ease: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(mặc định).
- - linear: Chỉ định hiệu hứng chuyển tiếp với cùng tốc độ từ đầu đến cuối.
- - ease-in: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm.
- - ease-out: Chỉ định hiệu ứng chuyển tiếp với kết thúc chậm.
- - ease-in-out: Chỉ định hiệu ứng chuyển tiếp với khởi đầu và kết thúc chậm.
- - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị của riêng mình trong hàm cublic-bezier.
+  - ease: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(mặc định).
+  - linear: Chỉ định hiệu hứng chuyển tiếp với cùng tốc độ từ đầu đến cuối.
+  - ease-in: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm.
+  - ease-out: Chỉ định hiệu ứng chuyển tiếp với kết thúc chậm.
+  - ease-in-out: Chỉ định hiệu ứng chuyển tiếp với khởi đầu và kết thúc chậm.
+  - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị của riêng mình trong hàm cublic-bezier.
 
 - transition-delay: Quy định cụ thể một giá trị delay(tính bằng giây) cho các hiệu ứng chuyển.
 
@@ -389,12 +389,12 @@ div { //hình sẽ chạy 5 lần trước khi dừng.
   - alternate-reverse: Hình được phát ngược trước sau đó phát như bình thường.
 
 - animation-timing-function: Chỉ định đường cong tốc độ của ảnh động. Nó có các giá trị sau:
- - ease: Chỉ định ảnh động bắt đầu với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(default).
- - linear: Chỉ định ảnh động có cùng tốc độ từ đầu đến cuối.
- - ease-in: Chỉ định ảnh động với khởi đầu chậm.
- - ease-out: Chỉ định ảnh động có kết thúc chậm.
- - ease-in-out: Chỉ định ảnh động với khởi đầu và kết thúc đều chậm.
- - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị riêng của mình trong hàm cublic-bezier.
+  - ease: Chỉ định ảnh động bắt đầu với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(default).
+  - linear: Chỉ định ảnh động có cùng tốc độ từ đầu đến cuối.
+  - ease-in: Chỉ định ảnh động với khởi đầu chậm.
+  - ease-out: Chỉ định ảnh động có kết thúc chậm.
+  - ease-in-out: Chỉ định ảnh động với khởi đầu và kết thúc đều chậm.
+  - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị riêng của mình trong hàm cublic-bezier.
 
 - animation-fill-mode: Quy định cụ thể một phong các cho các phần tử mục tiêu khi ảnh đọng không được phát (trước khi nó bắt đầu, sau khi nó kết thúc hoặc cả hai). Nó có các giá trị:
   - none: (default) Ảnh động sẽ không áp dụng bất kì kiểu nào cho thành phần trước hoặc sau khi nó được phát.
