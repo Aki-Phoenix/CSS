@@ -324,12 +324,12 @@ Cho phép thay đổi giá trị thuộc tính một cách trơn tru, trong mộ
 - transition-timing-function: quy định các đường cong tốc độ của hiệu ứng chuyển tiếp.
 
 Nó có các giá trị như sau:
-  - ease: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(mặc định).
-  - linear: Chỉ định hiệu hứng chuyển tiếp với cùng tốc độ từ đầu đến cuối.
-  - ease-in: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm.
-  - ease-out: Chỉ định hiệu ứng chuyển tiếp với kết thúc chậm.
-  - ease-in-out: Chỉ định hiệu ứng chuyển tiếp với khởi đầu và kết thúc chậm.
-  - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị của riêng mình trong hàm cublic-bezier.
+   - ease: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm, sau đó nhanh, sau đó kết thúc chậm(mặc định).
+   - linear: Chỉ định hiệu hứng chuyển tiếp với cùng tốc độ từ đầu đến cuối.
+   - ease-in: Chỉ định hiệu ứng chuyển tiếp với khởi đầu chậm.
+   - ease-out: Chỉ định hiệu ứng chuyển tiếp với kết thúc chậm.
+   - ease-in-out: Chỉ định hiệu ứng chuyển tiếp với khởi đầu và kết thúc chậm.
+   - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị của riêng mình trong hàm cublic-bezier.
 
 - transition-delay: Quy định cụ thể một giá trị delay(tính bằng giây) cho các hiệu ứng chuyển.
 
