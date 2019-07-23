@@ -397,10 +397,10 @@ div { //hình sẽ chạy 5 lần trước khi dừng.
  - cublic-bezier(n,n,n,n): Cho phép xác định các giá trị riêng của mình trong hàm cublic-bezier.
 
 - animation-fill-mode: Quy định cụ thể một phong các cho các phần tử mục tiêu khi ảnh đọng không được phát (trước khi nó bắt đầu, sau khi nó kết thúc hoặc cả hai). Nó có các giá trị:
- - none: (default) Ảnh động sẽ không áp dụng bất kì kiểu nào cho thành phần trước hoặc sau khi nó được phát.
- - forwards: Phần tử sẽ giữ lại các kiểu giá trị được đặt bởi khung hình chính cuối cùng(tùy thuộc vào hướng đi và số lần lặp lại của ảnh động).
- - backwards: Phần tử sẽ nhận các kiểu giá trị được đặt bởi khung hình chính đầu tiên(phụ thuộc vào hướng đi của ảnh động).
- - both: Ảnh động sẽ tuân thủ theo các quy tắc cho cả tiến và lùi, mở rộng các thuộc tính ảnh động theo cả 2 hướng. 
+  - none: (default) Ảnh động sẽ không áp dụng bất kì kiểu nào cho thành phần trước hoặc sau khi nó được phát.
+  - forwards: Phần tử sẽ giữ lại các kiểu giá trị được đặt bởi khung hình chính cuối cùng(tùy thuộc vào hướng đi và số lần lặp lại của ảnh động).
+  - backwards: Phần tử sẽ nhận các kiểu giá trị được đặt bởi khung hình chính đầu tiên(phụ thuộc vào hướng đi của ảnh động).
+  - both: Ảnh động sẽ tuân thủ theo các quy tắc cho cả tiến và lùi, mở rộng các thuộc tính ảnh động theo cả 2 hướng. 
 
 - animation: Là thuộc tính ngắn gọn cho phép người dùng chị định các giá trị cho các thuộc tính trong đối với ảnh động.
 
